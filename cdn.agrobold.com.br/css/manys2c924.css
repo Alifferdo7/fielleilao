@@ -1,0 +1,132 @@
+.pulse-danger {
+  box-shadow: 0 0 0 0 rgb(169, 3, 41);
+  -webkit-animation: bg_pulse 1.35s infinite cubic-bezier(0.66, 0, 0, 1);
+  -moz-animation: bg_pulse 1.35s infinite cubic-bezier(0.66, 0, 0, 1);
+  -ms-animation: bg_pulse 1.35s infinite cubic-bezier(0.66, 0, 0, 1);
+  animation: bg_pulse 1.35s infinite cubic-bezier(0.66, 0, 0, 1);
+}
+
+.pulse-warning {
+  box-shadow: 0 0 0 0 rgb(192, 152, 83);
+  -webkit-animation: bg_pulse 1.35s infinite cubic-bezier(0.66, 0, 0, 1);
+  -moz-animation: bg_pulse 1.35s infinite cubic-bezier(0.66, 0, 0, 1);
+  -ms-animation: bg_pulse 1.35s infinite cubic-bezier(0.66, 0, 0, 1);
+  animation: bg_pulse 1.35s infinite cubic-bezier(0.66, 0, 0, 1);
+}
+
+
+
+.pulse-stop-hover:hover  {
+  -webkit-animation: none;
+  -moz-animation: none;
+  -ms-animation: none;
+  animation: none;
+}
+@-webkit-keyframes bg_pulse {to {box-shadow: 0 0 0 45px rgba(232, 76, 61, 0);}}
+@-moz-keyframes bg_pulse {to {box-shadow: 0 0 0 45px rgba(232, 76, 61, 0);}}
+@-ms-keyframes bg_pulse {to {box-shadow: 0 0 0 45px rgba(232, 76, 61, 0);}}
+@keyframes bg_pulse {to {box-shadow: 0 0 0 45px rgba(232, 76, 61, 0);}}
+
+
+
+
+
+#preload2 {
+  width: 100%;
+  position: fixed;
+  height: 100%;
+  z-index: 999999;
+  top:0;
+  left:0;
+	background: rgba(0, 0, 0, 0.40);
+	/* background: rgba(36, 192, 141, 0.18); */
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+#preload2 img {
+  width: 150px
+}
+
+#preload2 span {
+	color: #ffffff;
+	font-size: 25px;
+	position: absolute;
+	font-weight: 600;
+}
+
+
+
+
+
+select.invalid,
+input.invalid {
+  margin-bottom: 0 !important;
+}
+
+em.invalid {
+  font-size: 9px;
+  color: #dc5f5f;
+}
+
+
+
+
+
+
+
+
+
+.pulse-text-success {
+  -webkit-animation: color_change_success .6s infinite alternate;
+  -moz-animation: color_change_success .6s infinite alternate;
+  -ms-animation: color_change_success .6s infinite alternate;
+  -o-animation: color_change_success .6s infinite alternate;
+  animation: color_change_success .6s infinite alternate;
+}
+
+@-moz-keyframes color_change_success {
+  from { color: #006133; }
+	to { color: #00a859; }
+}
+@-ms-keyframes color_change_success {
+	from { color: #006133; }
+	to { color: #00a859; }
+}
+@-o-keyframes color_change_success {
+	from { color: #006133; }
+	to { color: #00a859; }
+}
+@keyframes color_change_success {
+	from { color: #006133; }
+	to { color: #00a859; }
+}
+
+.pulse-text-danger {
+  -webkit-animation: color_change2 .6s infinite alternate;
+  -moz-animation: color_change2 .6s infinite alternate;
+  -ms-animation: color_change2 .6s infinite alternate;
+  -o-animation: color_change2 .6s infinite alternate;
+  animation: color_change2 .6s infinite alternate;
+}
+
+@-moz-keyframes color_change2 {
+  from { color: #000000; }
+	to { color: #dd3b4b; }
+}
+@-ms-keyframes color_change2 {
+	from { color: #000000; }
+	to { color: #dd3b4b; }
+}
+@-o-keyframes color_change2 {
+	from { color: #000000; }
+	to { color: #dd3b4b; }
+}
+@keyframes color_change2 {
+	from { color: #000000; }
+	to { color: #dd3b4b; }
+}
+
+

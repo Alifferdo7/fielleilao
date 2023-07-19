@@ -1,0 +1,256 @@
+.corpo {
+  /* margin-top: 50px!important; */
+  min-width: 1100px;
+  margin: 0;
+  padding: 5px 10px;
+  color: #F4931D;
+  font: 8px Verdana, sans-serif;
+/*   background: #fff; */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  /* Comentado */
+ -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+#embrulho {
+  position: relative;
+}
+
+.galho {
+  position: relative;
+  margin-left: 83px;
+/*   display */
+}
+
+.galho.lv3,
+.galho.lv2 {
+  
+  margin-left: 160px;
+}
+
+.galho:before {
+  content: "";
+  width: 50px;
+  border-top: 2px solid #007d33;
+  position: absolute;
+  left: -100px;
+  top: 50%;
+  margin-top: 1px;
+}
+
+.galho.galho-raiz:before {
+  width: 20px;
+  left: -60px;
+}
+
+.arco {
+  position: relative;
+  min-height: 60px;
+}
+.arco:before {
+  content: "";
+  height: 100%;
+  border-left: 2px solid #007d33;
+  position: absolute;
+  left: -50px;
+}
+.arco:after {
+  content: "";
+  width: 50px;
+  border-top: 2px solid #007d33;
+  position: absolute;
+  left: -50px;
+  top: 50%;
+  margin-top: 1px;
+}
+.arco:first-child:before {
+  width: 10px;
+  height: 50%;
+  top: 50%;
+  margin-top: 2px;
+  border-radius: 10px 0 0 0;
+}
+.arco:first-child:after {
+  height: 10px;
+  border-radius: 10px 0 0 0;
+}
+.arco:last-child:before {
+  width: 10px;
+  height: 50%;
+  border-radius: 0 0 0 10px;
+}
+.arco:last-child:after {
+  height: 10px;
+  border-top: none;
+  border-bottom: 2px solid #007d33;
+  border-radius: 0 0 0 10px;
+  margin-top: -9px;
+}
+.arco.unico:before {
+  display: none;
+}
+.arco.unico:after {
+  width: 50px;
+  height: 0;
+  margin-top: 1px;
+  border-radius: 0;
+}
+
+.label {
+  left: -10;
+  top: 51.5%;
+  display: block;
+  min-width: 155px;
+  padding: 9px 0px;
+  line-height: 15px;
+  text-align: left;
+  position: absolute;
+  margin-top: -22px;
+  border-radius: 5px;
+  z-index: 2;
+}
+
+/*.m { background-color: black}
+.f { background-color: #ed1124}*/
+.m { background-color: #ffffff;border: 1px solid #fff;color:#2d2c2c!important}
+.f { background-color: #fff;border: 1px solid #ffffff;color:#2d2c2c!important}
+
+.label.f > div,
+.label.m > div {
+  font-size: 9px;
+}
+
+
+.label.raiz {
+  /* color: #F4931D; */
+  color: #efd5a9;
+  min-width: 50px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 25px;
+  border-radius: 50%;
+  padding: 0;
+  z-index: 999;
+  /* background-color: #d4d4d4; */
+
+  /*  Com Icone  */
+  /* top: 50%; */
+  /* left: 135px; */
+
+  /*  Com Imagem do Animal  */
+  top: 47.7%;
+  left: -1%;
+}
+
+
+.label.raiz img {
+  /* width: 50px; */
+  height: 65px;
+  border-radius: 5%;
+  border: 2px solid;
+}
+
+
+
+/*************************************************/
+/********************* MOBILE ********************/
+/*************************************************/
+
+
+/* IPAD */
+@media(max-width:768px) {
+
+  .label.raiz img {
+    width: 50px;
+    height: 50px;
+    border-radius: 3%;
+    border: 2px solid;
+  }
+
+  .corpo {
+    min-width:  100px;/*     !!!!!!!!!!!!!!! */
+    padding: 5px;
+  }
+
+  .galho {
+    margin-left: 200px;
+  }
+  .galho:before {
+      display: none
+  }
+
+ /* Altura entre os animais */
+  .arco {
+    min-height: 85px;
+  }
+
+  /* Sumindo com as linhas dos galhos */
+  .arco:after,
+  .arco:before,
+  .arco.unico:before {
+    display: none;
+  } 
+
+  .label {
+    /* Tentativa de centralizar */
+    left: calc( 50% - 270px );
+    line-height: 13px;
+    margin-top: -22px;
+  }
+
+  .label.raiz {
+    top: 47%;
+    min-width: 35px;
+    height: 35px;
+    line-height: 35px;
+    font-size: 19px;
+    left: 0%;
+  }
+  
+} /* MIN-WIDTH:768PX */
+
+
+/* IPHONE 5 | IPHONE 6 Plus | Galaxy */
+@media(max-width:420px) {
+  .galho {
+    margin-left: 125px;
+  }
+  /* Altura entre os animais */
+  .arco {
+    min-height: 80px;
+  }
+  .label {
+    /* Tentativa de centralizar */
+    left: calc( 50% - 225px );
+    line-height: 10px;
+    margin-top: -22px;
+  }
+  .label.raiz {
+    left: 10px;
+  }
+
+
+}
+
+/* IPHONE 5 */
+@media(max-width:320px) {
+  .galho {
+    margin-left: 0px;
+  }
+  /* Altura entre os animais */
+  .arco {
+    min-height: 75px;
+  }
+  .label {
+    /* Tentativa de centralizar */
+    left: calc( 70% - 190px ); 
+    line-height: 10px;
+    margin-top: -22px;
+  }
+}
+/********************* /MOBILE *******************/
